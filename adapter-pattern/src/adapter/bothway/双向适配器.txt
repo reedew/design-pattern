@@ -1,0 +1,18 @@
+class Adapter implements Target,Adaptee {
+    //同时维持对抽象目标类和适配者的引用
+    private Target target;
+    private Adaptee adaptee;
+    public Adapter(Target target) {
+        this.target = target;
+    }
+    public Adapter(Adaptee adaptee) {
+        this.adaptee = adaptee;
+    }
+    public void request() {
+        adaptee.specificRequest();
+    }
+    public void specificRequest() {
+        target.request();
+    }
+}
+在实际开发中，我们很少使用双向适配器。

@@ -1,0 +1,8 @@
+class Adapter extends Adaptee implements Target {
+    public void request() {
+        specificRequest();
+    }
+}
+如果Target不是接口，而是一个类，就无法使用类适配器。
+如果适配者Adaptee为最终(Final)类，也无法使用类适配器。
+使用较少。
